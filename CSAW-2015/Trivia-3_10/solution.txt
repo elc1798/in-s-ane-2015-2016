@@ -1,0 +1,4 @@
+Problem: This mode on x86 is generally referred to as ring -2.
+
+Solution: System Management Mode ("SMM" works too)
+https://en.wikipedia.org/wiki/System_Management_Mode
