@@ -1,0 +1,3 @@
+strings flash_c8429a430278283c0e571baebca3d139.img | grep flag{
+
+flag{b3l0w_th3_r4dar}

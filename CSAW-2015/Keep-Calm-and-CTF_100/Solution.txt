@@ -1,0 +1,3 @@
+strings img.jpg | head
+
+h1d1ng_in_4lm0st_pla1n_sigh7

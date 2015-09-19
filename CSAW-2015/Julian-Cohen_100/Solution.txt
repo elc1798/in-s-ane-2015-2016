@@ -1,0 +1,4 @@
+Julian Cohen is a judge for CSAW, and if we go onto his twitter account over at
+https://twitter.com/HockeyInJune, scrolling down a little bit reveals the flag.
+
+flag{f7da7636727524d8681ab0d2a072d663}

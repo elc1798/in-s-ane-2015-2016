@@ -1,0 +1,6 @@
+The message is encoded in base64, but decoding it doesn't give us the entire message. Most of it
+is filled with random characters.
+
+However, with what it does give us and the name of the problem, we can guess the flag.
+
+We are fsociety, we are finally free, we are finally awake!
