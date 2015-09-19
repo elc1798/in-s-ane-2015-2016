@@ -1,0 +1,20 @@
+steghide.jpg needs to be decrypted with steghide. You need the key to decrypt.
+
+Use tineye/google reverse image search or the highway numbers to find the airports.
+
+1.png: Jose Marti
+2.png: Hong Kong International Airport
+3.png: Los Angeles Airport
+4.png: Toronto Pearson International Airport
+
+Get their 3-letter codes:
+
+1: HAV
+2: HKG
+3: LAX
+4: YYZ
+
+Concatenate them: HAVHKGLAXYYZ
+Using that as key gives you a key.txt file.
+
+flag: iH4t3A1rp0rt5
