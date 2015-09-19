@@ -3,3 +3,5 @@ After opening the pcap file in wireshark, you can search for "flag{" (Ctrl-F, se
 There's a packet with a python program and encrypted string.
 The python program was used to generate the string.
 solution.py contains the code to decode the encryption.
+
+flag{li0ns_and_tig3rs_4nd_b34rs_0h_mi}
