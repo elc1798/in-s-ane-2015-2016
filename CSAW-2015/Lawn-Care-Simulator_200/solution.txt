@@ -1,4 +1,20 @@
-<info on how to get hint & files>
+A quick look at the page showed that the version, which was located at the bottom of the page,
+was being sourced from a git log. Trying to go to http://54.175.3.248:8089/.git proved that this was indeed a git repository.
+
+We can traverse the .git folder like any normal .git folder, so we can view the log and stuff.
+The log tells us that the source files are being tracked by git, so we can try to extract these files to view the contents.
+Going to http://54.175.3.248:8089/.git/index, gives us download a file with all the files that git is keeping track of, and
+we can see validate_pass.php, premium.php, and more. Running getgit.sh will create a basic .git folder
+structure and grab generic files from the server.
+
+In order to actually retrieve the files, you need to know a little bit about how git stores them.
+Git stores objects within the objects folder, and assigns a folder name and file based on the object's hash. For example, if the hash of premium.php was
+aa3025bdb15120ad0a2558246402119ce11f4e2e, the object would be located at .git/objects/aa/3025bdb15120ad0a2558246402119ce11f4e2e.
+Knowing this, we simply need to find the hashes of the various files. We can do so via the command "git fsck"
+This command verifies the objects in the work tree, but we don't have any objects within our objects folder, so it'll tell us what is missing.
+Using fetchobject.sh, we can grab the object based on its hash from the server. Simply grab whatever git fsck
+says is missing. After all the objects are restored, we can checkout the files and view the source of the website.
+By viewing the source, we can plan an attack:
 
 The attack is a multi-step process. First, we find the username by attacking sign_up.php.
 
@@ -10,6 +26,6 @@ Since it uses LIKE, we can put "%" as username as a wildcard. The page then tell
 The password for premium.php is validated by validate_pass.php.
 The program first checks if the password is of the right length,
 then checks the password character by character with a delay of 300 milliseconds
-between each character. We need to find both the first character and the proper 
-length to see the effect of the sleep. After that, we keep trying every 
+between each character. We need to find both the first character and the proper
+length to see the effect of the sleep. After that, we keep trying every
 character possible and selecting the ones that add a 300 ms delay.
