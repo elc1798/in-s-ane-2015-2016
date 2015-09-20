@@ -1,0 +1,15 @@
+<info on how to get hint & files>
+
+The attack is a multi-step process. First, we find the username by attacking sign_up.php.
+
+The query:
+$query = "SELECT username FROM users WHERE username LIKE '$user';";
+
+Since it uses LIKE, we can put "%" as username as a wildcard. The page then tells us that the username "~~FLAG~~" is not available. Thus, we have our username.
+
+The password for premium.php is validated by validate_pass.php.
+The program first checks if the password is of the right length,
+then checks the password character by character with a delay of 300 milliseconds
+between each character. We need to find both the first character and the proper 
+length to see the effect of the sleep. After that, we keep trying every 
+character possible and selecting the ones that add a 300 ms delay.
