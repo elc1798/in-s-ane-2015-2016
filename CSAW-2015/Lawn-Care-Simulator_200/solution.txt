@@ -3,7 +3,7 @@ was being sourced from a git log. Trying to go to http://54.175.3.248:8089/.git 
 
 We can traverse the .git folder like any normal .git folder, so we can view the log and stuff.
 The log tells us that the source files are being tracked by git, so we can try to extract these files to view the contents.
-Going to http://54.175.3.248:8089/.git/index, gives us download a file with all the files that git is keeping track of, and
+Going to http://54.175.3.248:8089/.git/index downloads a file with a list of the files that git is keeping track of, and
 we can see validate_pass.php, premium.php, and more. Running getgit.sh will create a basic .git folder
 structure and grab generic files from the server.
 
