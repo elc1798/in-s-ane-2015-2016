@@ -1,2 +1,2 @@
-# in-s-ane-2015-2016
-in/s/ane's 2015-2016 CTF season
+# in-s-ane-csaw-2015
+CSAW writeups by team in/s/ane
